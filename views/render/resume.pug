@@ -1,0 +1,113 @@
+extends ../page-layout
+
+mixin subsection(item, icon)
+    .subsection-title-wrapper
+        h4.subsection-title
+            i.subsection-title-icon(class=`${icon}`)
+            =item.title
+        span.subsection-subtitle=`${item.company} | ${item.date_range}`
+    ul.description
+        each bullet in item.description
+            li=bullet
+
+mixin header
+    .header
+        h1.name=header.name
+        h2.title=header.title
+
+mixin bio
+    .bio
+        .contact
+            h3 Contact
+            .contact-body
+                .phone
+                    =contact.phone
+                    i.fa-solid.fa-phone
+                .email
+                    =contact.email
+                    i.fa-solid.fa-envelope
+                .location
+                    =contact.location
+                    i.fa-solid.fa-location-dot
+                if contact.linkedin
+                    .linkedin
+                        a(href=`https://linkedin.com${contact.linkedin}`)=contact.linkedin
+                        i.fa-brands.fa-linkedin
+                if contact.github
+                    .github
+                        a(href=`https://github.com/${contact.github}`)=`@${contact.github}`
+                        i.fa-brands.fa-github
+                if contact.website
+                    .website
+                        a(href=`https://${contact.website}`)=contact.website
+                        i.fa-solid.fa-globe
+        .bio-padding
+        .summary
+            h3 Professional Summary
+            .summary-text=summary
+
+mixin skills
+    if skills
+        .section.skills
+            h3.section-title Relevant Skills
+            .skill-list
+                each skill in skills
+                    .skill=skill
+
+mixin certs
+    if certifications
+        .section.certifications
+            h3.section-title Certifications
+            .cert-list
+                each cert in certifications
+                    .cert=cert
+
+mixin experience
+    .section.experience
+        h3.section-title Experience
+        .list.experience-list
+        each item in experience
+            .subsection.experience-item
+                +subsection(item, 'fa-solid fa-suitcase')
+
+mixin projects
+    if projects
+        .section.projects
+            h3.section-title Projects
+            .list.projects-list
+            each item in projects
+                .subsection.project-item
+                    +subsection(item, 'fa-solid fa-gear')
+
+mixin education
+    if education
+        .section.education
+            h3.section-title Education
+            each edu in education
+                .edu
+                    .subsection-title-wrapper
+                        h4.subsection-title
+                            i.subsection-title-icon.fa-solid.fa-graduation-cap
+                            =edu.degree
+                        span.subsection-subtitle=`${edu.school} | ${edu.graduation_year}`
+                .edu-columns
+                    .col
+                        h5.col-header Relevant Courses
+                        each item in edu.relevant_coursework
+                            .item=item
+                    
+                    .col
+                        h5.col-header Awards and Honors
+                        each item in edu.awards_and_honors
+                            .item=item
+
+
+block content
+    .content 
+        +header
+        +bio
+        +skills
+        +certs
+        +experience
+        +projects
+        +education

@@ -1,0 +1,39 @@
+extends page-layout
+
+mixin header
+    .cover-letter-header
+        h1.name=header.name
+        h2.title=header.title
+    .cover-letter-bio
+            a(href=`tel:+1-${contact.phone}`).phone.bio-item
+                i.fa-solid.fa-phone
+                =contact.phone
+            a(href=`mailto:${contact.email}`).email.bio-item
+                i.fa-solid.fa-envelope
+                =contact.email
+            if contact.linkedin
+                a(href=`https://linkedin.com${contact.linkedin}`, target='_blank').linkedin.bio-item.clickable
+                    i.fa-brands.fa-linkedin
+                    =contact.linkedin
+            if contact.github
+                a(href=`https://github.com/${contact.github}`, target='_blank').github.bio-item
+                    i.fa-brands.fa-github
+                    =`@${contact.github}`
+            if contact.website
+                a(href=`https://${contact.website}`, target='_blank').website.bio-item
+                    i.fa-solid.fa-globe
+                    =contact.website
+
+
+mixin cover-letter-content
+    .salutation=`Hiring Manager,`
+    .cover-letter-body
+        block
+    .signature-block
+        .sign-off All the best,
+        .signature Ada Mandala
+
+block content
+    .content.cover-letter
+        +header
+        block cover-letter-content
