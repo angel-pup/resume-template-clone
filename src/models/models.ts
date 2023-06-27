@@ -50,6 +50,7 @@ export type Project = {
     date_range: string,
     title: string,
     description: string[],
+    repo: string,
     company: string,
 }
 
@@ -58,7 +59,7 @@ export type Education = {
     school: string,
     degree: string,
     relevant_coursework: string[],
-    awards_and_honors: string[],
+    // awards_and_honors: string[],
 }
 
 export type Resume = {

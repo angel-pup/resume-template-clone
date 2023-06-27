@@ -2,9 +2,13 @@ extends ../page-layout
 
 mixin subsection(item, icon)
     .subsection-title-wrapper
-        h4.subsection-title
-            i.subsection-title-icon(class=`${icon}`)
-            =item.title
+        div.subsection-title-subwrapper
+            h4.subsection-title
+                i.subsection-title-icon(class=`${icon}`)
+                =item.title
+            if item.repo
+                span.subsection-title-link
+                    a(href=`https://github.com/${item.repo}`)=`github.com/${item.repo}`
         span.subsection-subtitle=`${item.company} | ${item.date_range}`
     ul.description
         each bullet in item.description
@@ -93,12 +97,14 @@ mixin education
                 .edu-columns
                     .col
                         h5.col-header Relevant Courses
-                        each item in edu.relevant_coursework
-                            .item=item
+                        .relevant-courses
+                            .list-items
+                                each item in edu.relevant_coursework
+                                    .item=item
                     
-                    .col
-                        h5.col-header Awards and Honors
-                        each item in edu.awards_and_honors
+                    //- .col
+                    //-     h5.col-header Awards and Honors
+                        //- each item in edu.awards_and_honors
                             .item=item
 
 

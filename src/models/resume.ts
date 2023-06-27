@@ -4,88 +4,111 @@ const regex = /\n|\t/;
 
 let resume: Resume = {
     header: {
-        name: "Your Name",
-        title: "Your Job Title"
+        name: "Vess Stewart",
+        title: "Full Stack Web Developer"
     },
     contact: {
-        phone: "XXX-XXX-XXXX",
-        email: "your.name@mail.com",
-        location: "City, State",
-        website: "yoursite.me",
-        linkedin: "/in/your-profile",
-        github: "your-github",
+        phone: "318-450-0663",
+        email: "vess.stewart@pm.me",
+        location: "Kansas City, Missouri",
+        website: "angel-pup.dev",
+        linkedin: "/in/vess-stewart/",
+        github: "angel-pup",
     },
     summary: `
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum
-    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia
-    deserunt mollit anim id est laborum.
+    Results-driven full stack web developer with a keen eye for
+    detail and a passion for creating user-friendly and visually
+    appealing websites and applications. Equipped with excellent
+    communication, interpersonal, and creative thinking skills.
+    Seeking a challenging role where I can leverage my technical
+    expertise and innovative problem-solving abilities to contribute
+    to your company's success. Known for being a dependable team
+    player and a mentor, I am ready to apply my dedication and
+    continuous learning mindset to drive impactful solutions and
+    foster growth within your organization.
     `.replace(regex, ' '),
     skills: [
-        "Coolness",
-        "Swag",
-        "Great Hair",
-        "Cool Shoes"
+        "MERN Stack",
+        "JIRA",
+        "SQL",
+        "Firebase",
+        "REST",
+        "TypeScript",
+        "GraphQL",
+        "Heroku"
     ],
     certifications: [
-        'Certified Badass'
+        "ITIL Foundation Certificate in IT Service Management",
+        "KU Full-Stack Flex Coding Boot Camp"
     ],
     experience: [
         {
-            title: "A Job",
-            company: "Some Company",
+            title: "Support Engineer II",
+            company: "ISG Technology",
             date_range: new DateRange(
-                new Date(2022, 6, 1),
+                new Date(2023, 3, 1),
                 null
             ).format(),
             description: [
-                "did a thing",
-                "two things, actually",
-                "maybe three..."
+                "Successfully resolved critical priority one issues promptly, demonstrating strong problem-solving skills and the ability to work under pressure.",
+                "Collaborated effectively with cross-functional teams to troubleshoot and escalate complex issues, fostering a collaborative environment focused on issue resolution and customer satisfaction.",
+                "Contributed to documenting and troubleshooting issues across a multitude of software and services for a diverse portfolio of client companies.",
             ]
         },
         {
-            title: "Another Job",
-            company: "Some Other Company",
+            title: "Collaboration Admin",
+            company: "Vantage Health Plan",
             date_range: new DateRange(
-                new Date(2019, 8, 1),
-                new Date(2022, 6, 1)
+                new Date(2021, 10, 1),
+                new Date(2022, 9, 1)
             ).format(),
             description: [
-                "did a thing",
-                "two things, actually",
-                "maybe three..."
+                "Implemented and managed critical services, ensuring efficient performance and optimizing call routing systems.",
+                "Collaborated closely with cross-functional teams, including vendors and engineers, to successfully migrate CCX systems to a modern CCE/Calabrio environment",
+                "Developed intelligence reports that identified and resolved configuration issues to enhance system usability and functionality.",
             ]
         },
     ],
     projects: [
         {
             date_range: new DateRange(
-                new Date(2019, 4),
-                new Date(2022, 4)
+                new Date(2023, 2),
+                new Date(2023, 3)
             ).format(),
-            title: "Some Project",
+            title: "Tech Blog",
             description: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna"
+                "Developed a simple MVC tech blog utilizing Express.js as the backend framework, Handlebars as the templating engine, and session management for user authentication. Implemented middleware functions for enhanced security and optimized routing. Leveraged MySQL database and Sequelize ORM for efficient data management and retrieval."
             ],
-            company: "Some Company",
+            repo: "angel-pup/tech-blog",
+            company: "KU Bootcamp"
         },
     ],
     education: [
         {
-            graduation_year: 2020,
-            school: "University or School",
-            degree: "Degree",
+            graduation_year: 2017,
+            school: "University of Louisiana Monroe",
+            degree: "B.S. in Computer Science",
             relevant_coursework: [
-                "labore et dolore magna", " labore et dolore magna 2",
+                "Data Structures",
+                "Analysis of Alogorithms", 
+                "Object-Oriented Design",
+                "Advanced Discrete Structures",
+                "Internet Programming",
+                "Theory of Database Management Systems",
             ],
-            awards_and_honors: [
-                'award for  labore et dolore magna',
-            ],
+        },
+        {
+            graduation_year: 2023,
+            school: "University of Kansas",
+            degree: "KU Full-Stack Flex Coding Boot Camp Certificate",
+            relevant_coursework: [
+                "MVC",
+                "PWA",
+                "API",
+                "MERN",
+                "ORM",
+                "OOP"
+            ]
         }
     ],
 }
