@@ -227,7 +227,6 @@ h5.col-header {
 
 .edu-columns {
   display: flex;
-  border-bottom: 1px dotted var(--amber);
   margin-bottom: 0.5em;
 }
 
@@ -236,14 +235,18 @@ h5.col-header {
 }
 
 .list-items {
-  /* list-style-type: none; */
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  width: 75%;
+  margin: auto;
+}
+
+.relevant-courses .item {
+  flex-basis: 50%;
 }
 
 .relevant-courses {
-  
+  margin-bottom: 1.5em
 }
 
 /* -- PRINT -- */
