@@ -1,3 +1,8 @@
+# Code Clone Source:
+
+Developer: Ada Mandala
+Repo link: [ada-x64/resume-template](https://github.com/ada-x64/resume-template)
+
 # resume-template
 
 This repo is a template for building resumes and cover letters using Pug, CSS, and Typescript.
