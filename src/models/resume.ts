@@ -83,7 +83,7 @@ let resume: Resume = {
             ).format(),
             title: "Social Network API",
             description: [
-                "Developed a RESTful API demonstration with mongoose ODM / MongoDB, hosted on Atlas with Node/Express server hosted on Heroku."
+                "Developed a RESTful API demonstration with mongoose ODM / MongoDB hosted on Atlas with a Node/Express server hosted on Heroku."
             ],
             repo: "angel-pup/social-network-api",
             company: "KU Bootcamp"
