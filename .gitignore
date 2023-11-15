@@ -2,3 +2,5 @@ target/
 rendered/
 node_modules/
 wwid.md
+.env
+
