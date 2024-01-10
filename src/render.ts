@@ -87,7 +87,7 @@ import { Resume } from './models/models';
                 if (needs_abort) {
                     return Promise.reject();
                 }
-                page.emulateMediaType('print');
+                page.emulateMediaType('screen');
                 page.createPDFStream({
                     'format': 'LETTER',
                     'printBackground': true,

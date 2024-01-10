@@ -25,6 +25,10 @@ export class DateRange {
     }
 }
 
+/*export type MetaData = {
+    font_awesome_kit: string,
+}*/
+
 export type Header = {
     name: string,
     title: string,
@@ -63,6 +67,7 @@ export type Education = {
 }
 
 export type Resume = {
+    //metadata: MetaData,
     header: Header,
     contact: Contact,
     summary: string,
