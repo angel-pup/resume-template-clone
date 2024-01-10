@@ -87,7 +87,8 @@ import { Resume } from './models/models';
                 if (needs_abort) {
                     return Promise.reject();
                 }
-                page.pdf({
+                page.emulateMediaType('screen');
+                page.createPDFStream({
                     'format': 'LETTER',
                     'printBackground': true,
                     'path': `${pdf_path}/${key}.pdf`

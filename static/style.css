@@ -237,16 +237,16 @@ h5.col-header {
 .list-items {
   display: flex;
   flex-wrap: wrap;
-  width: 75%;
-  margin: auto;
+  justify-content: space-between;
 }
 
-.relevant-courses .item {
-  flex-basis: 50%;
+.relevant-coursework-item {
+  width: 48%; 
 }
 
 .relevant-courses {
-  margin-bottom: 1.5em
+  width: 75%;
+  margin: .5em auto;
 }
 
 /* -- PRINT -- */

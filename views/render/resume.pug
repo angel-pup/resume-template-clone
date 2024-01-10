@@ -8,7 +8,8 @@ mixin subsection(item, icon)
                 =item.title
             if item.repo
                 span.subsection-title-link
-                    a(href=`https://github.com/${item.repo}`)=`github.com/${item.repo}`
+                    //- a(href=`https://github.com/${item.repo}`)=`github.com/${item.repo}`
+                    =`github.com/${item.repo}`
         span.subsection-subtitle=`${item.company} | ${item.date_range}`
     ul.description
         each bullet in item.description
@@ -35,15 +36,18 @@ mixin bio
                     i.fa-solid.fa-location-dot
                 if contact.linkedin
                     .linkedin
-                        a(href=`https://linkedin.com${contact.linkedin}`)=contact.linkedin
+                        //- a(href=`https://linkedin.com${contact.linkedin}`)=contact.linkedin
+                        =contact.linkedin
                         i.fa-brands.fa-linkedin
-                if contact.github
+                //if contact.github
                     .github
-                        a(href=`https://github.com/${contact.github}`)=`@${contact.github}`
+                        //- a(href=`https://github.com/${contact.github}`)=`@${contact.github}`
+                        =`@${contact.github}`
                         i.fa-brands.fa-github
-                if contact.website
+                //if contact.website
                     .website
-                        a(href=`https://${contact.website}`)=contact.website
+                        //- a(href=`https://${contact.website}`)=contact.website
+                        =contact.website
                         i.fa-solid.fa-globe
         .bio-padding
         .summary
@@ -83,6 +87,16 @@ mixin projects
                 .subsection.project-item
                     +subsection(item, 'fa-solid fa-gear')
 
+mixin projects_pt2
+    if projects_pt2
+        .section.projects
+            h3.section-title Projects Cont'd
+            .list.projects-list
+            each item in projects_pt2
+                .subsection.project-item
+                    +subsection(item, 'fa-solid fa-gear')
+
+
 mixin education
     if education
         .section.education
@@ -100,7 +114,7 @@ mixin education
                         .relevant-courses
                             .list-items
                                 each item in edu.relevant_coursework
-                                    .item=item
+                                    .relevant-coursework-item=item
                     
                     //- .col
                     //-     h5.col-header Awards and Honors
@@ -116,4 +130,5 @@ block content
         +certs
         +experience
         +projects
+        +projects_pt2
         +education
