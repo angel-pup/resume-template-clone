@@ -76,5 +76,6 @@ export type Resume = {
     certifications: string[] | null,
     experience: Experience[],
     projects: Project[] | null,
+    projects_pt2: Project[] | null,
     education: Education[] | null,
 }

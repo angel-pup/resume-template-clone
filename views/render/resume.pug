@@ -87,6 +87,16 @@ mixin projects
                 .subsection.project-item
                     +subsection(item, 'fa-solid fa-gear')
 
+mixin projects_pt2
+    if projects_pt2
+        .section.projects
+            h3.section-title Projects Cont'd
+            .list.projects-list
+            each item in projects_pt2
+                .subsection.project-item
+                    +subsection(item, 'fa-solid fa-gear')
+
+
 mixin education
     if education
         .section.education
@@ -120,4 +130,5 @@ block content
         +certs
         +experience
         +projects
+        +projects_pt2
         +education

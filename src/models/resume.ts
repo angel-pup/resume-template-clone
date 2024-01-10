@@ -19,7 +19,7 @@ let resume: Resume = {
         Full stack web developer with a passion for creating efficient 
         applications and adept at learning new technologies and systems rapidly.
         I am seeking a role where I can leverage my technical experience,
-        sharpen it, and make both my skills and your systems shine.
+        sharpen it, and make both your systems and my skills shine.
     `.replace(regex, ' '),
     skills: [
         "PostgreSQL, MSQL, MySQL",
@@ -44,27 +44,27 @@ let resume: Resume = {
                 null
             ).format(),
             description: [
-                "Successfully resolved critical issues promptly, demonstrating the ability to work under pressure.",
-                "Collaborated with cross-functional teams to troubleshoot and escalate complex issues.",
+                "Resolved over 1200 issues, over 100 of which were client company critical.",
+                "Single-handedly repaired an entire client company's DUO MFA configuration.",
                 "Contributed to documentation for a multitude of software and services for a diverse portfolio of client companies.",
-                "Assisted with Veeam Backup and Restoration processes.",
-                "Single-handedly repaired an entire client company's DUO MFA configuration."
+                "Helped orchestrate and run Veeam Backup and Restoration processes.",
+                "Collaborated with cross-functional teams to troubleshoot and escalate complex issues.",
             ]
         },
         {
             title: "Collaboration Admin",
-            company: "Vantage Health Plan",
+            company: "Vantage Health Plan (now BCBS of Louisiana)",
             date_range: new DateRange(
-                new Date(2018, 8, 1),
+                new Date(2017, 8, 1),
                 new Date(2022, 9, 1)
-            ).format(),
-            description: [
+                ).format(),
+                description: [
+                "Resolved complex critical issues involving up to 8 teams within a single day.",
                 "Implemented, managed and optimized high priority call routing systems, ensuring efficient performance.",
-                "Collaborated closely with vendors and engineers to successfully migrate CCX systems to a modern CCE/Calabrio environment",
-                "Developed intelligence reports that identified and resolved configuration issues enhancing system usability and functionality.",
-                "<Information regarding MSQL audits for CCE Environment>",
-                //"<Troubleshot major post migration malfunctions>",
-                "<Wrote documentation for Webex, Jabber, CUCM and other cisco technologies>",
+                "Collaborated closely with vendors and engineers to successfully migrate CCX systems to a modern CCE/Calabrio environment.",
+                "Developed and extended complex automated reports for teams all across the company.",
+                "Wrote SQL for reports and database audits in Microsoft SQL Server Management Studio.",
+                "Earned promotion for writing company-wide guide booklets and documentation for Webex, Jabber, CUCM and other Cisco tools.",
             ]
         },
     ],
@@ -92,7 +92,9 @@ let resume: Resume = {
             ],
             repo: "angel-pup/social-network-api",
             company: "KU Bootcamp"
-        },
+        }
+    ],
+    projects_pt2: [
         {
             date_range: new DateRange(
                 new Date(2023, 2),
